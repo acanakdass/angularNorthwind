@@ -1,0 +1,24 @@
+<div class="content">
+
+   <form [formGroup]="productAddForm">
+      <div class="mb-3">
+         <label for="productName" class="form-label">Product Name</label>
+         <input type="text" class="form-control" formControlName="productName" id="productName">
+         <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+      </div>
+      <div class="mb-3">
+         <label for="categoryId" class="form-label">Category</label>
+         <input type="number" class="form-control" formControlName="categoryId" id="categoryId">
+      </div>
+      <div class="mb-3">
+         <label for="unitPrice" class="form-label">Unit Price</label>
+         <input type="number" class="form-control" formControlName="unitPrice" id="unitPrice">
+      </div>
+      <div class="mb-3">
+         <label for="unitsInStock" class="form-label">Units In Stock</label>
+         <input type="number" class="form-control" formControlName="unitsInStock" id="unitsInStock">
+      </div>
+
+      <button (click)="add()" type="submit" class="btn btn-primary">Submit</button>
+   </form>
+</div>
