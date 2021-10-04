@@ -38,7 +38,8 @@ export class ProductAddComponent implements OnInit {
           this.toastrService.error(res.message);
         }
       }, resError => {
-        if (resError.error.Errors.length > 0) {
+        console.log(resError);
+        if (resError.error.length > 0) {
           console.log(resError.error.Errors)
           const errors = resError.error.Errors
           for (let i = 0; i < errors.length; i++) {
